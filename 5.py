@@ -2,8 +2,9 @@ F = open('input1.txt')
 S = F.read()
 print(S)
 S = list(map(str, S.split('\n')))
-'''for i in range(len(S)):
-'''
+for i in range(len(S)):
+    S[i] = S[i].split(':')
+    S[i][1] = frozenset(S[i][1].split(' '))
 C = []
 L = []
 print(S)
