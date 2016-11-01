@@ -36,11 +36,12 @@ parser.add_argument(
     action='store_true',
 )
 dir = os.listdir(sys.argv[1])
+print(sys.argv[1])
 for i in range(len(dir)):
     if os.path.isfile(sys.argv[1] + '/' + dir[i]):
-        print(dir[i])
+        print('  ',dir[i])
     if os.path.isdir(sys.argv[1] + '/' + dir[i]):
-        print(dir[i])
+        print('  ',dir[i])
         dirdir = os.listdir(sys.argv[1] + '/' + dir[i])
         for j in range(len(dirdir)):
-            print('  ', dirdir[j])
+            print('     ', dirdir[j])
